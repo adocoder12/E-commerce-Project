@@ -78,7 +78,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: $secondary-bg;
+  // background-color: $secondary-bg;
+  outline: 1px solid $decorator;
 }
 
 .products-wrapper {
