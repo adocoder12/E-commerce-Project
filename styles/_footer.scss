@@ -1,0 +1,45 @@
+.site-footer {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  width: calc(100% - 16px);
+  background-color: $secondary-bg;
+  padding: 20px 12px;
+  gap: 15px;
+  grid-area: footer;
+
+  hr {
+    width: 80%;
+    border-top-color: #131212;
+    opacity: 0.5;
+    margin: 10px 0;
+  }
+
+  .copyright-text {
+    color: #666;
+  }
+
+  .info-footer {
+    display: grid;
+    width: 100%;
+    gap: 30px;
+    justify-content: start;
+
+    > * {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    @media (min-width: 568px) {
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+      width: 100%;
+
+      hr {
+        width: 50%;
+      }
+    }
+  }
+}

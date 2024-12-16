@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Dev</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="header">
+      <div class="headerWrapper">
+        <a class="headerLogo" href="../index.php">Test Dev</a>
+        <div class="linksWrapper">
+          <ul class="navLinks">
+            <li>
+              <a href="#">Inicio</a>
+            </li>
+          </ul>
+          <button id="cart-icon" class="button__navlink" data-count="0">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              fill="none"
+              stroke="currentColor"
+              class="icon"
+            >
+              <circle r="1" cy="21" cx="9"></circle>
+              <circle r="1" cy="21" cx="20"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <section class="Main-container">
+      <section class="producst-container">
+        <div class="products-bar">
+          <h1>Products</h1>
+
+          <div class="widget-wrapper">
+            <!-- Search input -->
+            <div class="container-input">
+              <input
+                type="text"
+                placeholder="Search"
+                name="text"
+                class="input"
+                id="search-input"
+              />
+            </div>
+            <!-- dropdown menu category -->
+            <div class="dropdown">
+              <input
+                hidden=""
+                class="sr-only"
+                name="state-dropdown"
+                id="state-dropdown"
+                type="checkbox"
+              />
+              <label
+                aria-label="dropdown scrollbar"
+                for="state-dropdown"
+                id="selectedCategory"
+                class="trigger"
+                >Select category</label
+              >
+              <ul
+                id="categories"
+                class="list webkit-scrollbar"
+                role="list"
+                dir="auto"
+              >
+                <!-- Here append js -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="products-wrapper" id="products"></div>
+        <!--  Template for product -->
+        <template id="product-template">
+          <div class="card">
+            <div class="card-image-wrapper">
+              <img class="card-image" alt="Product Image" />
+            </div>
+            <div class="card_heading">
+              <p class="category"></p>
+              <h2 class="product-title"></h2>
+
+              <h3 class="price"><span class="price_span">€</span></h3>
+            </div>
+          </div>
+        </template>
+      </section>
+    </section>
+    <!-- Product modal template -->
+    <template id="productModalTemplate">
+      <section class="modal" aria-hidden="true">
+        <div class="modal-content">
+          <div id="closeModal" class="close">X</div>
+          <div class="modal-product-details">
+            <img class="modal-product-image" src="" alt="" />
+            <div class="modal-info">
+              <h2 class="modal-product-title"></h2>
+              <p>
+                <strong>Category:</strong>
+                <span class="modal-product-category"></span>
+              </p>
+              <p>
+                <strong>Price:</strong> €<span
+                  class="modal-product-price"
+                ></span>
+              </p>
+              <p>
+                <strong>Description:</strong>
+                <span class="modal-product-description"></span>
+              </p>
+              <button id="addToCart" class="button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  fill="none"
+                  stroke="currentColor"
+                  class="icon"
+                >
+                  <circle r="1" cy="21" cx="9"></circle>
+                  <circle r="1" cy="21" cx="20"></circle>
+                  <path
+                    d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                  ></path>
+                </svg>
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <!-- footer -->
+    <footer class="site-footer">
+      <h2 class="main-title">Test Dev</h2>
+      <div class="info-footer">
+        <div class="store-helsinki"></div>
+        <div class="store-espoo"></div>
+      </div>
+      <hr />
+      <div class="copyrigth-footer">
+        <p class="copyright-text">
+          Copyright &copy; 2024 All Rights Reserved by
+          <a href="#">Adonay D'agosto</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+
+  <script type="module" src="./scripts/main.js"></script>
+</html>

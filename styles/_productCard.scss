@@ -1,0 +1,88 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card-image-wrapper {
+  background-color: inherit;
+  position: relative;
+  width: 100%;
+  height: 410px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card_heading {
+  display: grid;
+  justify-content: stretch;
+  gap: 18px;
+  padding: 12px;
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: rgb(120, 120, 120);
+}
+
+.product-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: rgb(50, 50, 50);
+  margin: 0;
+}
+
+.price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: $decorator-secondary;
+  justify-self: flex-end;
+}
+
+.price_span {
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+}

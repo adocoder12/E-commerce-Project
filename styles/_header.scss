@@ -1,0 +1,97 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 16px);
+  padding: 24px 8px;
+  position: fixed;
+  background-color: $primary-bg;
+  z-index: 10;
+  top: 0;
+  grid-area: header;
+
+  .headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 996px;
+  }
+
+  .headerLogo {
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 300;
+    color: $main-text;
+    text-transform: uppercase;
+  }
+
+  .linksWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .button__navlink {
+    position: relative;
+
+    // the shopping cart icon
+
+    &::after {
+      content: attr(data-count);
+      display: inline-block;
+      background-color: $secondary-bg;
+      color: #000;
+      border-radius: 50%;
+      padding: 0.2em;
+      font-size: 1em;
+      line-height: 1;
+      text-align: center;
+      min-width: 1em;
+      height: 1em;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &[data-count="0"]::after {
+      display: none;
+    }
+  }
+
+  .navLinks {
+    display: flex;
+    gap: 20px;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        font-weight: 300;
+        text-transform: capitalize;
+        font-size: 1.3em;
+        color: $main-text;
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          top: 24px;
+          left: 0px;
+          width: 0px;
+          background: $decorator;
+          transition: 0.5s;
+        }
+
+        &:hover:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.container-input {
+  position: relative;
+
+  .input {
+    width: 150px;
+    padding: 10px 0 10px 40px;
+    border-radius: 9999px;
+    border: 1px solid $decorator;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+    font-size: 16px;
+
+    &:focus {
+      opacity: 1;
+      width: 250px;
+    }
+  }
+}

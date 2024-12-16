@@ -1,0 +1,35 @@
+// Variables
+:root {
+  --main-background: #f9f6f4;
+  --secondary-background: #e9e0db;
+  --main-text: #141414;
+  --decorator: rgb(189, 86, 30);
+  --decorator-secondary: #4f2412;
+}
+
+$primary-bg: var(--main-background);
+$secondary-bg: var(--secondary-background);
+$main-text: var(--main-text);
+$decorator: var(--decorator);
+$decorator-secondary: var(--decorator-secondary);
+
+// Mixin for button styles
+@mixin button($width, $height, $bg-color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0 !important;
+  border: 0 !important;
+  width: $width;
+  height: $height;
+  border-radius: 8px;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  background-color: $bg-color;
+  font-weight: 600;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
