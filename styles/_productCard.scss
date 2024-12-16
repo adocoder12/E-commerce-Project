@@ -1,12 +1,13 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background: #fff;
   border: 1px solid rgb(224, 224, 224);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 4;
   width: 100%;
   cursor: pointer;
 }
@@ -84,5 +85,11 @@
   .icon {
     width: 16px;
     height: 16px;
+  }
+}
+
+@media (min-width: 690px) {
+  .card {
+    aspect-ratio: 3/4;
   }
 }

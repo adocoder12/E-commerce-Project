@@ -210,12 +210,13 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background: #fff;
   border: 1px solid rgb(224, 224, 224);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  aspect-ratio: 3/4;
+  aspect-ratio: 4/4;
   width: 100%;
   cursor: pointer;
 }
@@ -293,11 +294,18 @@
   height: 16px;
 }
 
+@media (min-width: 690px) {
+  .card {
+    aspect-ratio: 3/4;
+  }
+}
 .container-input {
   position: relative;
+  margin-left: 16px;
 }
 .container-input .input {
-  width: 150px;
+  max-width: 150px;
+  min-width: 100px;
   padding: 10px 0 10px 40px;
   border-radius: 9999px;
   border: 1px solid var(--decorator);
@@ -323,7 +331,7 @@
   position: relative;
   inset-inline: auto;
   max-width: 298px;
-  min-width: 298px;
+  min-width: 180px;
 }
 .dropdown input.sr-only {
   position: absolute;

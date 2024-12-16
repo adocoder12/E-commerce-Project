@@ -1,8 +1,10 @@
 .container-input {
   position: relative;
+  margin-left: 16px;
 
   .input {
-    width: 150px;
+    max-width: 150px;
+    min-width: 100px;
     padding: 10px 0 10px 40px;
     border-radius: 9999px;
     border: 1px solid $decorator;
