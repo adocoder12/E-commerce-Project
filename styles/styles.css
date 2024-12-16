@@ -306,8 +306,7 @@
   margin-left: 16px;
 }
 .container-input .input {
-  max-width: 150px;
-  min-width: 100px;
+  width: 150px;
   padding: 10px 0 10px 40px;
   border-radius: 9999px;
   border: 1px solid var(--decorator);
@@ -555,6 +554,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 20px;
   padding: 20px;
+  min-height: 60vh;
 }
 
 .widget-wrapper {
