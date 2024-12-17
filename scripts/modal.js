@@ -3,6 +3,7 @@ import { addToCart } from "./cart.js";
 export const displayProductModal = (product) => {
   // Get the modal template
   const modalTemplate = document.getElementById("productModalTemplate");
+  const productsContainer = document.getElementById("products");
 
   // Check if the template exists
   if (!modalTemplate) {
@@ -48,11 +49,16 @@ export const displayProductModal = (product) => {
       addToCart(productToAdd);
       addToCartButton.textContent = "Added to Cart!";
       addToCartButton.style.backgroundColor = "green";
+
+      // // close the modal after 3 seconds
+      // setInterval(() => {
+      //   modal.remove();
+      // }, 3000);
     });
   }
 
   // Append the modal to the body (or a container)
-  document.body.appendChild(modalElement);
+  productsContainer.appendChild(modalElement);
 
   // Display the modal
   const modal = document.body.querySelector(".modal");

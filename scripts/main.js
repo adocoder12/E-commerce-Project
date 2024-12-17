@@ -1,12 +1,10 @@
 import { fetchProducts } from "./fecth.js";
-import { displayProducts } from "./products.js";
+import { displayProducts } from "./displayProducts.js";
 import { renderCategories } from "./category.js";
 import { setupRealTimeSearch } from "./searchInput.js";
 
-// Initialize the app after the DOM is loaded
-document.addEventListener("DOMContentLoaded", function () {
-  initializeApp();
-});
+// Import the products from a local file
+// import { products } from "./products.js";
 
 async function initializeApp() {
   try {
@@ -27,3 +25,7 @@ async function initializeApp() {
     console.error(error); // Log any errors that occur
   }
 }
+// Initialize the app after the DOM is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  initializeApp();
+});

@@ -1,4 +1,4 @@
-import { displayProducts } from "./products.js";
+import { displayProducts } from "./displayProducts.js";
 
 // Render the categories inside the dropdown list
 export const renderCategories = (products) => {

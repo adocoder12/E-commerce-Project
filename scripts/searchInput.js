@@ -1,4 +1,4 @@
-import { displayProducts } from "./products.js";
+import { displayProducts } from "./displayProducts.js";
 
 export function setupRealTimeSearch(products) {
   const searchInput = document.getElementById("search-input");
@@ -6,7 +6,14 @@ export function setupRealTimeSearch(products) {
   searchInput.addEventListener("input", (event) => {
     const query = event.target.value.toLowerCase();
     const filteredProducts = filterProducts(query, products);
-    displayProducts(filteredProducts);
+
+    if (filteredProducts.length === 0) {
+      const productsContainer = document.querySelector(".products-wrapper");
+      productsContainer.innerHTML =
+        '<h2 style="display: flex;">No product found</h2>';
+    } else {
+      displayProducts(filteredProducts);
+    }
   });
 }
 
